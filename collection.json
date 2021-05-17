@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "De-car Api",
-        "_postman_id": "52d944f1-24d7-45e4-a769-e62f63ede1d6",
+        "_postman_id": "32d3fc12-4e5b-4971-abe3-5c5d3b879966",
         "description": "Api for de-car shop",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -58,12 +58,12 @@
                             "query": [
                                 {
                                     "key": "brand_id",
-                                    "value": "mollitia",
+                                    "value": "recusandae",
                                     "description": "The brand id.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/get-brand?brand_id=mollitia"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/get-brand?brand_id=recusandae"
                         },
                         "method": "GET",
                         "header": [
@@ -146,36 +146,36 @@
                             "query": [
                                 {
                                     "key": "brand_id",
-                                    "value": "vel",
+                                    "value": "ipsum",
                                     "description": "The brand id.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "est",
+                                    "value": "saepe",
                                     "description": "The new brand name.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "visible",
-                                    "value": "5",
+                                    "value": "14",
                                     "description": "The visible parameter 1 or 0.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "position",
-                                    "value": "15",
+                                    "value": "20",
                                     "description": "The position parameter.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "image",
-                                    "value": "quos",
+                                    "value": "accusantium",
                                     "description": "The image file.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/update-brand?brand_id=vel&name=est&visible=5&position=15&image=quos"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/update-brand?brand_id=ipsum&name=saepe&visible=14&position=20&image=accusantium"
                         },
                         "method": "POST",
                         "header": [
@@ -360,24 +360,24 @@
                             "query": [
                                 {
                                     "key": "name",
-                                    "value": "doloremque",
+                                    "value": "repudiandae",
                                     "description": "The name for the new user.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "email",
-                                    "value": "eveniet",
+                                    "value": "sit",
                                     "description": "The email for the new user.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "password",
-                                    "value": "adipisci",
+                                    "value": "quasi",
                                     "description": "The password for the new user.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/register?name=doloremque&email=eveniet&password=adipisci"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/register?name=repudiandae&email=sit&password=quasi"
                         },
                         "method": "POST",
                         "header": [
@@ -408,18 +408,18 @@
                             "query": [
                                 {
                                     "key": "email",
-                                    "value": "cupiditate",
+                                    "value": "in",
                                     "description": "user email.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "password",
-                                    "value": "enim",
+                                    "value": "voluptas",
                                     "description": "User password.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=cupiditate&password=enim"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=in&password=voluptas"
                         },
                         "method": "POST",
                         "header": [

@@ -44,7 +44,7 @@
                             <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: May 13 2021</li>
+            <li>Last updated: May 17 2021</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -136,7 +136,7 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://decar.test/api/get-brand?brand_id=mollitia" \
+    -G "http://decar.test/api/get-brand?brand_id=recusandae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -144,7 +144,7 @@ fetch(url, {
 );
 
 let params = {
-    "brand_id": "mollitia",
+    "brand_id": "recusandae",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -317,7 +317,7 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://decar.test/api/update-brand?brand_id=vel&amp;name=est&amp;visible=5&amp;position=15&amp;image=quos" \
+    "http://decar.test/api/update-brand?brand_id=ipsum&amp;name=saepe&amp;visible=14&amp;position=20&amp;image=accusantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -325,11 +325,11 @@ fetch(url, {
 );
 
 let params = {
-    "brand_id": "vel",
-    "name": "est",
-    "visible": "5",
-    "position": "15",
-    "image": "quos",
+    "brand_id": "ipsum",
+    "name": "saepe",
+    "visible": "14",
+    "position": "20",
+    "image": "accusantium",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1205,7 +1205,7 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://decar.test/api/register?name=doloremque&amp;email=eveniet&amp;password=adipisci" \
+    "http://decar.test/api/register?name=repudiandae&amp;email=sit&amp;password=quasi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -1213,9 +1213,9 @@ fetch(url, {
 );
 
 let params = {
-    "name": "doloremque",
-    "email": "eveniet",
-    "password": "adipisci",
+    "name": "repudiandae",
+    "email": "sit",
+    "password": "quasi",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1271,7 +1271,7 @@ The password for the new user.</p>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://decar.test/api/login?email=cupiditate&amp;password=enim" \
+    "http://decar.test/api/login?email=in&amp;password=voluptas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -1279,8 +1279,8 @@ The password for the new user.</p>
 );
 
 let params = {
-    "email": "cupiditate",
-    "password": "enim",
+    "email": "in",
+    "password": "voluptas",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));

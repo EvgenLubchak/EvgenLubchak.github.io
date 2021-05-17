@@ -50,12 +50,12 @@ paths:
                     in: query
                     name: brand_id
                     description: 'The brand id.'
-                    example: mollitia
+                    example: recusandae
                     required: true
                     schema:
                         type: string
                         description: 'The brand id.'
-                        example: mollitia
+                        example: recusandae
                 -
                     in: header
                     name: Content-Type
@@ -156,52 +156,52 @@ paths:
                     in: query
                     name: brand_id
                     description: 'The brand id.'
-                    example: vel
+                    example: ipsum
                     required: true
                     schema:
                         type: string
                         description: 'The brand id.'
-                        example: vel
+                        example: ipsum
                 -
                     in: query
                     name: name
                     description: 'The new brand name.'
-                    example: est
+                    example: saepe
                     required: false
                     schema:
                         type: string
                         description: 'The new brand name.'
-                        example: est
+                        example: saepe
                 -
                     in: query
                     name: visible
                     description: 'The visible parameter 1 or 0.'
-                    example: 5
+                    example: 14
                     required: false
                     schema:
                         type: integer
                         description: 'The visible parameter 1 or 0.'
-                        example: 5
+                        example: 14
                 -
                     in: query
                     name: position
                     description: 'The position parameter.'
-                    example: 15
+                    example: 20
                     required: false
                     schema:
                         type: integer
                         description: 'The position parameter.'
-                        example: 15
+                        example: 20
                 -
                     in: query
                     name: image
                     description: 'The image file.'
-                    example: quos
+                    example: accusantium
                     required: false
                     schema:
                         type: string
                         description: 'The image file.'
-                        example: quos
+                        example: accusantium
                 -
                     in: header
                     name: Content-Type
@@ -410,32 +410,32 @@ paths:
                     in: query
                     name: name
                     description: 'The name for the new user.'
-                    example: doloremque
+                    example: repudiandae
                     required: true
                     schema:
                         type: string
                         description: 'The name for the new user.'
-                        example: doloremque
+                        example: repudiandae
                 -
                     in: query
                     name: email
                     description: 'The email for the new user.'
-                    example: eveniet
+                    example: sit
                     required: true
                     schema:
                         type: string
                         description: 'The email for the new user.'
-                        example: eveniet
+                        example: sit
                 -
                     in: query
                     name: password
                     description: 'The password for the new user.'
-                    example: adipisci
+                    example: quasi
                     required: true
                     schema:
                         type: string
                         description: 'The password for the new user.'
-                        example: adipisci
+                        example: quasi
                 -
                     in: header
                     name: Content-Type
@@ -463,22 +463,22 @@ paths:
                     in: query
                     name: email
                     description: 'user email.'
-                    example: cupiditate
+                    example: in
                     required: true
                     schema:
                         type: string
                         description: 'user email.'
-                        example: cupiditate
+                        example: in
                 -
                     in: query
                     name: password
                     description: 'User password.'
-                    example: enim
+                    example: voluptas
                     required: true
                     schema:
                         type: string
                         description: 'User password.'
-                        example: enim
+                        example: voluptas
                 -
                     in: header
                     name: Content-Type
