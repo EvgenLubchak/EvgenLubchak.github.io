@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "decar.test"
+            "value": "localhost"
         }
     ],
     "info": {
         "name": "De-car Api",
-        "_postman_id": "32d3fc12-4e5b-4971-abe3-5c5d3b879966",
+        "_postman_id": "5192cdea-3ee7-4a2c-b7d2-5bcae32fb02b",
         "description": "Api for de-car shop",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -58,12 +58,12 @@
                             "query": [
                                 {
                                     "key": "brand_id",
-                                    "value": "recusandae",
+                                    "value": "qui",
                                     "description": "The brand id.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/get-brand?brand_id=recusandae"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/get-brand?brand_id=qui"
                         },
                         "method": "GET",
                         "header": [
@@ -146,36 +146,48 @@
                             "query": [
                                 {
                                     "key": "brand_id",
-                                    "value": "ipsum",
+                                    "value": "incidunt",
                                     "description": "The brand id.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "saepe",
+                                    "value": "exercitationem",
                                     "description": "The new brand name.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "visible",
-                                    "value": "14",
+                                    "value": "3",
                                     "description": "The visible parameter 1 or 0.",
                                     "disabled": false
                                 },
                                 {
+                                    "key": "favor_flag",
+                                    "value": "13",
+                                    "description": "The favor_flag parameter 1 or 0.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "active",
+                                    "value": "12",
+                                    "description": "The active parameter 1 or 0.",
+                                    "disabled": false
+                                },
+                                {
                                     "key": "position",
-                                    "value": "20",
+                                    "value": "10",
                                     "description": "The position parameter.",
                                     "disabled": false
                                 },
                                 {
-                                    "key": "image",
-                                    "value": "accusantium",
-                                    "description": "The image file.",
+                                    "key": "the",
+                                    "value": "ea",
+                                    "description": "image file.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/update-brand?brand_id=ipsum&name=saepe&visible=14&position=20&image=accusantium"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/update-brand?brand_id=incidunt&name=exercitationem&visible=3&favor_flag=13&active=12&position=10&the=ea"
                         },
                         "method": "POST",
                         "header": [
@@ -314,35 +326,6 @@
                         }
                     },
                     "response": []
-                },
-                {
-                    "name": "\/",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "\/",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/\/"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
                 }
             ]
         },
@@ -360,24 +343,24 @@
                             "query": [
                                 {
                                     "key": "name",
-                                    "value": "repudiandae",
+                                    "value": "dolorem",
                                     "description": "The name for the new user.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "email",
-                                    "value": "sit",
+                                    "value": "porro",
                                     "description": "The email for the new user.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "password",
-                                    "value": "quasi",
+                                    "value": "architecto",
                                     "description": "The password for the new user.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/register?name=repudiandae&email=sit&password=quasi"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/register?name=dolorem&email=porro&password=architecto"
                         },
                         "method": "POST",
                         "header": [
@@ -408,18 +391,18 @@
                             "query": [
                                 {
                                     "key": "email",
-                                    "value": "in",
+                                    "value": "illum",
                                     "description": "user email.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "password",
-                                    "value": "voluptas",
+                                    "value": "beatae",
                                     "description": "User password.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=in&password=voluptas"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=illum&password=beatae"
                         },
                         "method": "POST",
                         "header": [
