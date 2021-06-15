@@ -151,7 +151,7 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/get-brand?brand_id=et" \
+    -G "http://localhost/api/get-brand?brand_id=perferendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -159,7 +159,7 @@ fetch(url, {
 );
 
 let params = {
-    "brand_id": "et",
+    "brand_id": "perferendis",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -338,33 +338,38 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://localhost/api/update-brand?brand_id=ipsa&amp;name=aut&amp;visible=10&amp;favor_flag=15&amp;active=15&amp;position=16&amp;the=id" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"</code></pre>
+    "http://localhost/api/update-brand" \
+    -H "Content-Type: multipart/form-data" \
+    -H "Accept: application/json" \
+    -F "brand_id=non" \
+    -F "name=sint" \
+    -F "visible=15" \
+    -F "favor_flag=1" \
+    -F "active=2" \
+    -F "position=7" \
+    -F "image=@/tmp/phpCSl81F" </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/update-brand"
 );
 
-let params = {
-    "brand_id": "ipsa",
-    "name": "aut",
-    "visible": "10",
-    "favor_flag": "15",
-    "active": "15",
-    "position": "16",
-    "the": "id",
-};
-Object.keys(params)
-    .forEach(key =&gt; url.searchParams.append(key, params[key]));
-
 let headers = {
-    "Content-Type": "application/json",
+    "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
+
+const body = new FormData();
+body.append('brand_id', 'non');
+body.append('name', 'sint');
+body.append('visible', '15');
+body.append('favor_flag', '1');
+body.append('active', '2');
+body.append('position', '7');
+body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
     method: "POST",
     headers,
+    body,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
 <p>Example response (200):</p>
@@ -388,7 +393,7 @@ fetch(url, {
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-POSTapi-update-brand"></code></pre>
 </div>
-<form id="form-POSTapi-update-brand" data-method="POST" data-path="api/update-brand" data-authed="1" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-update-brand', this);">
+<form id="form-POSTapi-update-brand" data-method="POST" data-path="api/update-brand" data-authed="1" data-hasfiles="1" data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-update-brand', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
         <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-update-brand" onclick="tryItOut('POSTapi-update-brand');">Try it out ⚡</button>
@@ -402,42 +407,43 @@ fetch(url, {
 <p>
 <label id="auth-POSTapi-update-brand" hidden>Authorization header: <b><code>Bearer </code></b><input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="POSTapi-update-brand" data-component="header"></label>
 </p>
-<h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
 <b><code>brand_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="brand_id" data-endpoint="POSTapi-update-brand" data-component="query" required  hidden>
+<input type="text" name="brand_id" data-endpoint="POSTapi-update-brand" data-component="body" required  hidden>
 <br>
 The brand id.</p>
 <p>
 <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="name" data-endpoint="POSTapi-update-brand" data-component="query"  hidden>
+<input type="text" name="name" data-endpoint="POSTapi-update-brand" data-component="body"  hidden>
 <br>
 The new brand name.</p>
 <p>
 <b><code>visible</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-<input type="number" name="visible" data-endpoint="POSTapi-update-brand" data-component="query"  hidden>
+<input type="number" name="visible" data-endpoint="POSTapi-update-brand" data-component="body"  hidden>
 <br>
 The visible parameter 1 or 0.</p>
 <p>
 <b><code>favor_flag</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-<input type="number" name="favor_flag" data-endpoint="POSTapi-update-brand" data-component="query"  hidden>
+<input type="number" name="favor_flag" data-endpoint="POSTapi-update-brand" data-component="body"  hidden>
 <br>
 The favor_flag parameter 1 or 0.</p>
 <p>
 <b><code>active</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-<input type="number" name="active" data-endpoint="POSTapi-update-brand" data-component="query"  hidden>
+<input type="number" name="active" data-endpoint="POSTapi-update-brand" data-component="body"  hidden>
 <br>
 The active parameter 1 or 0.</p>
 <p>
 <b><code>position</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-<input type="number" name="position" data-endpoint="POSTapi-update-brand" data-component="query"  hidden>
+<input type="number" name="position" data-endpoint="POSTapi-update-brand" data-component="body"  hidden>
 <br>
 The position parameter.</p>
 <p>
-<b><code>the</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="the" data-endpoint="POSTapi-update-brand" data-component="query"  hidden>
+<b><code>image</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
+<input type="file" name="image" data-endpoint="POSTapi-update-brand" data-component="body"  hidden>
 <br>
-image file.</p>
+The image file.</p>
+
 </form><h1>Endpoints</h1>
 <h2>Return an empty response simply to trigger the storage of the CSRF cookie in the browser.</h2>
 <blockquote>
@@ -1071,7 +1077,7 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://localhost/api/register?name=voluptatem&amp;email=dolorum&amp;password=eos" \
+    "http://localhost/api/register?name=odit&amp;email=neque&amp;password=culpa" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -1079,9 +1085,9 @@ fetch(url, {
 );
 
 let params = {
-    "name": "voluptatem",
-    "email": "dolorum",
-    "password": "eos",
+    "name": "odit",
+    "email": "neque",
+    "password": "culpa",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1137,7 +1143,7 @@ The password for the new user.</p>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://localhost/api/login?email=quod&amp;password=voluptatibus" \
+    "http://localhost/api/login?email=molestiae&amp;password=nihil" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
@@ -1145,8 +1151,8 @@ The password for the new user.</p>
 );
 
 let params = {
-    "email": "quod",
-    "password": "voluptatibus",
+    "email": "molestiae",
+    "password": "nihil",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));

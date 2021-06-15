@@ -51,12 +51,12 @@ paths:
                     in: query
                     name: brand_id
                     description: 'The brand id.'
-                    example: et
+                    example: perferendis
                     required: true
                     schema:
                         type: string
                         description: 'The brand id.'
-                        example: et
+                        example: perferendis
                 -
                     in: header
                     name: Content-Type
@@ -158,80 +158,10 @@ paths:
             description: 'Update brand'
             parameters:
                 -
-                    in: query
-                    name: brand_id
-                    description: 'The brand id.'
-                    example: ipsa
-                    required: true
-                    schema:
-                        type: string
-                        description: 'The brand id.'
-                        example: ipsa
-                -
-                    in: query
-                    name: name
-                    description: 'The new brand name.'
-                    example: aut
-                    required: false
-                    schema:
-                        type: string
-                        description: 'The new brand name.'
-                        example: aut
-                -
-                    in: query
-                    name: visible
-                    description: 'The visible parameter 1 or 0.'
-                    example: 10
-                    required: false
-                    schema:
-                        type: integer
-                        description: 'The visible parameter 1 or 0.'
-                        example: 10
-                -
-                    in: query
-                    name: favor_flag
-                    description: 'The favor_flag parameter 1 or 0.'
-                    example: 15
-                    required: false
-                    schema:
-                        type: integer
-                        description: 'The favor_flag parameter 1 or 0.'
-                        example: 15
-                -
-                    in: query
-                    name: active
-                    description: 'The active parameter 1 or 0.'
-                    example: 15
-                    required: false
-                    schema:
-                        type: integer
-                        description: 'The active parameter 1 or 0.'
-                        example: 15
-                -
-                    in: query
-                    name: position
-                    description: 'The position parameter.'
-                    example: 16
-                    required: false
-                    schema:
-                        type: integer
-                        description: 'The position parameter.'
-                        example: 16
-                -
-                    in: query
-                    name: the
-                    description: 'image file.'
-                    example: id
-                    required: false
-                    schema:
-                        type: string
-                        description: 'image file.'
-                        example: id
-                -
                     in: header
                     name: Content-Type
                     description: ''
-                    example: application/json
+                    example: multipart/form-data
                     schema:
                         type: string
                 -
@@ -270,6 +200,43 @@ paths:
                                     updated_at: { type: string, example: '2021-05-06T14:01:10.000000Z' }
             tags:
                 - Brands
+            requestBody:
+                required: true
+                content:
+                    multipart/form-data:
+                        schema:
+                            type: object
+                            properties:
+                                brand_id:
+                                    type: string
+                                    description: 'The brand id.'
+                                    example: non
+                                name:
+                                    type: string
+                                    description: 'The new brand name.'
+                                    example: sint
+                                visible:
+                                    type: integer
+                                    description: 'The visible parameter 1 or 0.'
+                                    example: 15
+                                favor_flag:
+                                    type: integer
+                                    description: 'The favor_flag parameter 1 or 0.'
+                                    example: 1
+                                active:
+                                    type: integer
+                                    description: 'The active parameter 1 or 0.'
+                                    example: 2
+                                position:
+                                    type: integer
+                                    description: 'The position parameter.'
+                                    example: 7
+                                image:
+                                    type: string
+                                    format: binary
+                                    description: 'The image file.'
+                            required:
+                                - brand_id
     /sanctum/csrf-cookie:
         get:
             summary: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
@@ -409,32 +376,32 @@ paths:
                     in: query
                     name: name
                     description: 'The name for the new user.'
-                    example: voluptatem
+                    example: odit
                     required: true
                     schema:
                         type: string
                         description: 'The name for the new user.'
-                        example: voluptatem
+                        example: odit
                 -
                     in: query
                     name: email
                     description: 'The email for the new user.'
-                    example: dolorum
+                    example: neque
                     required: true
                     schema:
                         type: string
                         description: 'The email for the new user.'
-                        example: dolorum
+                        example: neque
                 -
                     in: query
                     name: password
                     description: 'The password for the new user.'
-                    example: eos
+                    example: culpa
                     required: true
                     schema:
                         type: string
                         description: 'The password for the new user.'
-                        example: eos
+                        example: culpa
                 -
                     in: header
                     name: Content-Type
@@ -462,22 +429,22 @@ paths:
                     in: query
                     name: email
                     description: 'user email.'
-                    example: quod
+                    example: molestiae
                     required: true
                     schema:
                         type: string
                         description: 'user email.'
-                        example: quod
+                        example: molestiae
                 -
                     in: query
                     name: password
                     description: 'User password.'
-                    example: voluptatibus
+                    example: nihil
                     required: true
                     schema:
                         type: string
                         description: 'User password.'
-                        example: voluptatibus
+                        example: nihil
                 -
                     in: header
                     name: Content-Type

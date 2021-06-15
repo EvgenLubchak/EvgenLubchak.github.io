@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "De-car Api",
-        "_postman_id": "02b98620-5040-437e-91df-fc1ba1fce842",
+        "_postman_id": "088c4074-91f7-4899-97e3-3e58f59e73ce",
         "description": "Api for de-car shop",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -58,12 +58,12 @@
                             "query": [
                                 {
                                     "key": "brand_id",
-                                    "value": "et",
+                                    "value": "perferendis",
                                     "description": "The brand id.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/get-brand?brand_id=et"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/get-brand?brand_id=perferendis"
                         },
                         "method": "GET",
                         "header": [
@@ -143,64 +143,60 @@
                             "protocol": "http",
                             "host": "{{baseUrl}}",
                             "path": "api\/update-brand",
-                            "query": [
-                                {
-                                    "key": "brand_id",
-                                    "value": "ipsa",
-                                    "description": "The brand id.",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "name",
-                                    "value": "aut",
-                                    "description": "The new brand name.",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "visible",
-                                    "value": "10",
-                                    "description": "The visible parameter 1 or 0.",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "favor_flag",
-                                    "value": "15",
-                                    "description": "The favor_flag parameter 1 or 0.",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "active",
-                                    "value": "15",
-                                    "description": "The active parameter 1 or 0.",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "position",
-                                    "value": "16",
-                                    "description": "The position parameter.",
-                                    "disabled": false
-                                },
-                                {
-                                    "key": "the",
-                                    "value": "id",
-                                    "description": "image file.",
-                                    "disabled": false
-                                }
-                            ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/update-brand?brand_id=ipsa&name=aut&visible=10&favor_flag=15&active=15&position=16&the=id"
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/update-brand"
                         },
                         "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
-                                "value": "application\/json"
+                                "value": "multipart\/form-data"
                             },
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "brand_id",
+                                    "value": "non",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "sint",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "visible",
+                                    "value": 15,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "favor_flag",
+                                    "value": 1,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "active",
+                                    "value": 2,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "position",
+                                    "value": 7,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
                         "description": "Update brand"
                     },
                     "response": []
@@ -343,24 +339,24 @@
                             "query": [
                                 {
                                     "key": "name",
-                                    "value": "voluptatem",
+                                    "value": "odit",
                                     "description": "The name for the new user.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "email",
-                                    "value": "dolorum",
+                                    "value": "neque",
                                     "description": "The email for the new user.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "password",
-                                    "value": "eos",
+                                    "value": "culpa",
                                     "description": "The password for the new user.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/register?name=voluptatem&email=dolorum&password=eos"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/register?name=odit&email=neque&password=culpa"
                         },
                         "method": "POST",
                         "header": [
@@ -391,18 +387,18 @@
                             "query": [
                                 {
                                     "key": "email",
-                                    "value": "quod",
+                                    "value": "molestiae",
                                     "description": "user email.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "password",
-                                    "value": "voluptatibus",
+                                    "value": "nihil",
                                     "description": "User password.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=quod&password=voluptatibus"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=molestiae&password=nihil"
                         },
                         "method": "POST",
                         "header": [
