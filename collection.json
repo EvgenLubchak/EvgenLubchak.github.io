@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "De-car Api",
-        "_postman_id": "5192cdea-3ee7-4a2c-b7d2-5bcae32fb02b",
+        "_postman_id": "02b98620-5040-437e-91df-fc1ba1fce842",
         "description": "Api for de-car shop",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -58,12 +58,12 @@
                             "query": [
                                 {
                                     "key": "brand_id",
-                                    "value": "qui",
+                                    "value": "et",
                                     "description": "The brand id.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/get-brand?brand_id=qui"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/get-brand?brand_id=et"
                         },
                         "method": "GET",
                         "header": [
@@ -146,48 +146,48 @@
                             "query": [
                                 {
                                     "key": "brand_id",
-                                    "value": "incidunt",
+                                    "value": "ipsa",
                                     "description": "The brand id.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "name",
-                                    "value": "exercitationem",
+                                    "value": "aut",
                                     "description": "The new brand name.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "visible",
-                                    "value": "3",
+                                    "value": "10",
                                     "description": "The visible parameter 1 or 0.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "favor_flag",
-                                    "value": "13",
+                                    "value": "15",
                                     "description": "The favor_flag parameter 1 or 0.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "active",
-                                    "value": "12",
+                                    "value": "15",
                                     "description": "The active parameter 1 or 0.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "position",
-                                    "value": "10",
+                                    "value": "16",
                                     "description": "The position parameter.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "the",
-                                    "value": "ea",
+                                    "value": "id",
                                     "description": "image file.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/update-brand?brand_id=incidunt&name=exercitationem&visible=3&favor_flag=13&active=12&position=10&the=ea"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/update-brand?brand_id=ipsa&name=aut&visible=10&favor_flag=15&active=15&position=16&the=id"
                         },
                         "method": "POST",
                         "header": [
@@ -343,24 +343,24 @@
                             "query": [
                                 {
                                     "key": "name",
-                                    "value": "dolorem",
+                                    "value": "voluptatem",
                                     "description": "The name for the new user.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "email",
-                                    "value": "porro",
+                                    "value": "dolorum",
                                     "description": "The email for the new user.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "password",
-                                    "value": "architecto",
+                                    "value": "eos",
                                     "description": "The password for the new user.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/register?name=dolorem&email=porro&password=architecto"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/register?name=voluptatem&email=dolorum&password=eos"
                         },
                         "method": "POST",
                         "header": [
@@ -391,18 +391,18 @@
                             "query": [
                                 {
                                     "key": "email",
-                                    "value": "illum",
+                                    "value": "quod",
                                     "description": "user email.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "password",
-                                    "value": "beatae",
+                                    "value": "voluptatibus",
                                     "description": "User password.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=illum&password=beatae"
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=quod&password=voluptatibus"
                         },
                         "method": "POST",
                         "header": [
