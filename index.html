@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Evgen Lubchak — Full-Stack Developer</title>
+  <meta name="description" content="Evgen Lubchak — Full-Stack Developer (PHP/Laravel, Vue.js), backend-focused. 9+ years; recently shipped an ML-driven Thompson Sampling feature to production.">
+  <meta name="author" content="Evgen Lubchak">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Evgen Lubchak — Full-Stack Developer">
+  <meta property="og:description" content="PHP/Laravel · Vue.js · backend-focused. 9+ years; shipped an ML-driven Thompson Sampling feature to production, with a self-driven RL / Go research project.">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap">
+  <style>
+    :root {
+      color-scheme: light;
+      --outer: #eceef0;
+      --sheet: #ffffff;
+      --ink: #1a1c20;
+      --muted: #595f67;
+      --faint: #8a9099;
+      --line: #e6e8eb;
+      --line-soft: #eef0f2;
+      --accent: #0d7d74;
+      --accent-ink: #0a655e;
+      --accent-soft: #e4f3f1;
+      --chip: #f1f3f4;
+      --maxw: 840px;
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --outer: #101216;
+        --sheet: #1b1e23;
+        --ink: #e9ebee;
+        --muted: #a2a8b0;
+        --faint: #767d86;
+        --line: #2b2f36;
+        --line-soft: #23272d;
+        --accent: #45cabd;
+        --accent-ink: #5fd6ca;
+        --accent-soft: #15302d;
+        --chip: #262a30;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    img { max-width: 100%; }
+    body {
+      margin: 0;
+      background: var(--outer);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 16px;
+      padding-block: clamp(20px, 4vw, 44px);
+    }
+    .sheet {
+      background: var(--sheet);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: clamp(24px, 5vw, 52px);
+      box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 40px -20px rgba(0,0,0,.18);
+    }
+    a { color: var(--accent-ink); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .name {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2rem, 6vw, 2.9rem);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      margin: 0 0 6px;
+    }
+    .role {
+      font-size: clamp(1rem, 2.6vw, 1.12rem);
+      color: var(--accent-ink);
+      font-weight: 600;
+      margin: 0 0 14px;
+    }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+    .contacts .sep { color: var(--faint); }
+    .contacts a.email { color: var(--muted); }
+
+    hr.rule { border: none; border-top: 1px solid var(--line); margin: 26px 0; }
+
+    section { margin-top: 26px; }
+    h2 {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      margin: 0 0 14px;
+      padding-bottom: 7px;
+      border-bottom: 2px solid var(--accent-soft);
+    }
+    .summary { margin: 0; color: var(--ink); max-width: 68ch; }
+
+    .skills { display: grid; gap: 10px; }
+    .skill-row { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: baseline; }
+    .skill-row .k {
+      font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--faint); padding-top: 3px;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chips span {
+      font-family: var(--mono); font-size: 0.74rem;
+      background: var(--chip); color: var(--ink);
+      padding: 3px 9px; border-radius: 6px;
+    }
+
+    .job { margin-bottom: 20px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 10px 20px; flex-wrap: wrap; margin-bottom: 7px;
+    }
+    .job-title { font-weight: 700; font-size: 1.02rem; color: var(--ink); }
+    .job-title .at { color: var(--accent-ink); font-weight: 600; }
+    .job-meta { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); white-space: nowrap; }
+    ul.bul { margin: 0; padding-left: 1.05rem; display: grid; gap: 5px; }
+    ul.bul li { color: var(--muted); }
+    ul.bul li b, .summary b { color: var(--ink); font-weight: 600; }
+    ul.bul li a, .summary a { font-weight: 600; }
+    code { font-family: var(--mono); font-size: 0.85em; }
+
+    .earlier { display: grid; gap: 5px; }
+    .earlier .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+    .earlier .co { font-weight: 600; color: var(--ink); }
+    .earlier .yr { font-family: var(--mono); font-size: 0.72rem; color: var(--faint); }
+    .earlier .desc { color: var(--muted); }
+
+    .proj { margin-bottom: 15px; }
+    .proj:last-child { margin-bottom: 0; }
+    .proj .pt { font-weight: 700; color: var(--ink); }
+    .proj .pstack { font-family: var(--mono); font-size: 0.74rem; color: var(--accent-ink); margin-left: 2px; }
+    .proj p { margin: 4px 0 0; color: var(--muted); }
+
+    .rd-sub { font-family: var(--mono); font-size: 0.74rem; color: var(--faint); margin: 0 0 10px; }
+
+    .edu { color: var(--muted); }
+    .edu b { color: var(--ink); font-weight: 600; }
+
+    @media (max-width: 560px) {
+      .skill-row { grid-template-columns: 1fr; gap: 4px; }
+      .job-head { gap: 2px; }
+      .job-meta { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="sheet">
+
+      <header>
+        <h1 class="name">Evgen Lubchak</h1>
+        <p class="role">Full-Stack Developer — PHP/Laravel · Vue.js · backend-focused</p>
+        <div class="contacts">
+          <span>Vinnytsia, Ukraine</span>
+          <span class="sep">·</span>
+          <a class="email" href="mailto:evgencs4@gmail.com">evgencs4@gmail.com</a>
+          <span class="sep">·</span>
+          <a href="https://linkedin.com/in/evgeniy-lubchak" target="_blank" rel="noopener">linkedin.com/in/evgeniy-lubchak</a>
+          <span class="sep">·</span>
+          <a href="https://github.com/EvgenLubchak" target="_blank" rel="noopener">github.com/EvgenLubchak</a>
+        </div>
+      </header>
+
+      <hr class="rule">
+
+      <section aria-label="Summary">
+        <p class="summary">
+          Full-stack developer with <b>9+ years</b> building backend-heavy web applications —
+          primarily <b>PHP / Laravel</b> with <b>Vue.js</b> on the front. Most recently designed and
+          shipped a production <b>ML-driven feature</b>: an automated push-scheduling engine built on a
+          Thompson Sampling multi-armed bandit, backed by a deep, self-driven
+          <b>reinforcement-learning / Go</b> research project. Comfortable across the stack and into
+          platform work — ClickHouse analytics, Kafka pipelines, Docker, and migrations on 60M+ row tables.
+        </p>
+      </section>
+
+      <section aria-label="Core skills">
+        <h2>Core skills</h2>
+        <div class="skills">
+          <div class="skill-row"><div class="k">Backend</div><div class="chips">
+            <span>PHP 8</span><span>Laravel 10 / Octane</span><span>REST APIs</span><span>MySQL</span>
+            <span>PostgreSQL</span><span>ClickHouse</span><span>Redis</span><span>Beanstalkd</span>
+            <span>Apache Kafka</span><span>Node.js</span><span>NestJS</span>
+          </div></div>
+          <div class="skill-row"><div class="k">Frontend</div><div class="chips">
+            <span>Vue 3</span><span>Composition API</span><span>Vuex</span><span>Vue Router</span>
+            <span>Vite</span><span>SCSS</span><span>vue-i18n</span><span>ApexCharts</span><span>axios</span>
+          </div></div>
+          <div class="skill-row"><div class="k">Data &amp; ML</div><div class="chips">
+            <span>ClickHouse analytics</span><span>materialized views</span><span>Thompson Sampling</span>
+            <span>multi-armed bandits</span><span>reinforcement learning</span><span>DQN / Double DQN</span>
+          </div></div>
+          <div class="skill-row"><div class="k">Infra / DevOps</div><div class="chips">
+            <span>Docker</span><span>Docker Compose</span><span>GitLab CI/CD</span><span>GitHub Actions</span>
+            <span>Sentry</span><span>Prometheus / Grafana</span><span>GCloud / K8s (exposure)</span>
+          </div></div>
+          <div class="skill-row"><div class="k">Practices</div><div class="chips">
+            <span>PHPUnit</span><span>PHPStan</span><span>PSR-12</span><span>code review</span>
+            <span>DTOs</span><span>multi-tenant architecture</span>
+          </div></div>
+          <div class="skill-row"><div class="k">Languages</div><div class="chips">
+            <span>Ukrainian — native</span><span>English — B2</span>
+          </div></div>
+        </div>
+      </section>
+
+      <section aria-label="Experience">
+        <h2>Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Full-Stack Developer <span class="at">· Confidential (NDA)</span></div>
+            <div class="job-meta">Dec 2025 – Oct 2026</div>
+          </div>
+          <p style="margin:0 0 8px;color:var(--muted)">
+            B2B web-push notification SaaS (ad-tech). Led the frontend end-to-end (top repository
+            contributor) and built core backend features on a small team.
+          </p>
+          <ul class="bul">
+            <li>Designed and shipped the platform's flagship feature — an automated push-scheduling
+              engine on a <b>Thompson Sampling multi-armed bandit</b>: ranks creatives nightly by
+              sampled CTR × EPC with Bayesian priors, with a constraint-based slot planner
+              (geo-local timezones, interval spacing, DST) and an <b>approve-first, human-in-the-loop</b> workflow.</li>
+            <li>Delivered optimization levers <b>end-to-end (backend + Vue UI)</b> — message TTL,
+              per-campaign creative-diversity cap, same-theme time-gap spacing — each a soft-constraint
+              algorithm with operator-facing explainability.</li>
+            <li>Built the <b>ClickHouse</b> analytics pipeline (~300M events/day) with Kafka ingestion
+              and materialized views; shipped retention dashboards (DAU/WAU/MAU, churn, conversion) in Metabase.</li>
+            <li>Owned the full <b>Vue 3</b> operator panel — config forms, a 7×24 schedule grid, and a
+              proposal-review screen with a 10-column metrics table and live slot editing; introduced
+              <b>i18n from scratch</b> (1,367 keys × 2 locales), a billing module + store, Google OAuth,
+              and app-wide request cancellation.</li>
+            <li>Improved frontend performance (lazy-loaded 48/53 routes, <code>lodash → lodash-es</code>)
+              and led no-downtime migrations (Vue, Vite, axios, ESLint).</li>
+            <li><b>Platform / ops:</b> diagnosed production incidents (an FCM delivery outage ≈1.2M error
+              events; a release where a long MySQL index migration on a 60M-row / 181 GB table blocked a
+              dependent ClickHouse change); managed Docker Compose dev environments and large-table
+              migration discipline (INSTANT columns, cursor-based batch processing).</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Full-Stack Developer <span class="at">· It Hoot</span></div>
+            <div class="job-meta">Oct 2023 – Aug 2025</div>
+          </div>
+          <ul class="bul">
+            <li>Developed and maintained a <b>CRM + lead-conversion (CNV) platform</b> for CFD trading
+              (charts, forex, crypto, indices) — a multi-service system spanning .NET, Node.js, PHP and Vue.</li>
+            <li>Built the Laravel/Vue layer and a <b>custom dynamic Vue.js data grid</b>; integrated with
+              the .NET and Node.js services over REST and <b>RabbitMQ</b>.</li>
+            <li>Stack: Laravel, Vue.js, Redis, RabbitMQ, ClickHouse on <b>Google Cloud / Kubernetes</b>,
+              GitHub Actions CI/CD.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Web Developer <span class="at">· AnyforSoft</span></div>
+            <div class="job-meta">Nov 2022 – Oct 2023</div>
+          </div>
+          <ul class="bul">
+            <li>Backend / full-stack development on <b>Laravel 8–9</b> and <b>NestJS</b>.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Web Developer <span class="at">· GreenGeeks</span></div>
+            <div class="job-meta">Jun 2020 – Nov 2022</div>
+          </div>
+          <ul class="bul">
+            <li>Built and maintained custom backend and Laravel 8–9 services for a web-hosting provider.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><div class="job-title">Earlier experience</div></div>
+          <div class="earlier">
+            <div class="row"><span class="co">Astound Commerce</span><span class="yr">2019–2020</span><span class="desc">— Node.js, Vue.js, Salesforce Commerce.</span></div>
+            <div class="row"><span class="co">TMDHosting</span><span class="yr">2018–2019</span><span class="desc">— Symfony, Vue.js, Node.js; WHMCS ticketing proxy API.</span></div>
+            <div class="row"><span class="co">DOBRO</span><span class="yr">2016–2018</span><span class="desc">— Laravel 5 web applications.</span></div>
+            <div class="row"><span class="co">Design Orbita</span><span class="yr">2015–2016</span><span class="desc">— Laravel / Kohana, MODx, WordPress, OpenCart.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="Selected projects">
+        <h2>Selected projects</h2>
+        <div class="proj">
+          <div><span class="pt">Multi-tenant Property Management API</span> <span class="pstack">Laravel 8–9 · React</span></div>
+          <p>Multi-tenant API with a separate database and S3 bucket per client, resolved per request.
+            Designed the schema, auth and CRUD endpoints; ~100% controller/service test coverage with
+            PHPUnit (unit + integration).</p>
+        </div>
+        <div class="proj">
+          <div><span class="pt">Interview Tool</span> <span class="pstack">Node.js · Express · Vue.js · Socket.IO</span></div>
+          <p>Full-stack app for running technical interviews: real-time question flow over Socket.IO,
+            automatic final-grade calculation, Vue admin panel, results export to Google Sheets.</p>
+        </div>
+      </section>
+
+      <section aria-label="R&amp;D side project">
+        <h2>R&amp;D / side project</h2>
+        <div class="job-head">
+          <div class="job-title"><code>boids</code> — real-time 2D simulation with RL agents <span class="at">· Go + ebiten</span></div>
+        </div>
+        <p class="rd-sub">personal research · <a href="https://github.com/EvgenLubchak/go" target="_blank" rel="noopener">github.com/EvgenLubchak/go</a> · ~20k LOC, ~50% tests</p>
+        <ul class="bul">
+          <li>Built a real-time simulation with <b>3,700+ concurrent agents</b> — Go worker pools,
+            phase-separated parallelism, race-detector-clean; <b>single external dependency</b>, all ML
+            and physics implemented from scratch.</li>
+          <li>Implemented a <b>reinforcement-learning stack from scratch</b> (no ML libraries): MLP +
+            backprop, Q-learning, <b>DQN</b> (experience replay, target network, error clipping),
+            <b>Double DQN</b>, frame stacking, and a GRU trained with BPTT (finite-difference gradient checks).</li>
+          <li>Diagnosed and fixed <b>maximization bias</b> in a live multi-agent system using
+            pre-registered predictions and dose-controlled experiments.</li>
+          <li>Engineered guard-rail testing: <b>mutation-verified tests</b>, AST-based guards pinning
+            experiment flags, and docs-drift tests keeping documentation in sync with code.</li>
+          <li>This research transferred directly to production — the adopted <b>Thompson Sampling</b>
+            push engine above came out of it.</li>
+        </ul>
+      </section>
+
+      <section aria-label="Education">
+        <h2>Education</h2>
+        <p class="edu"><b>Vinnytsia National Technical University (VNTU)</b> — Institute of Radio
+          Engineering, Communications, and Instrumentation. Higher education, 2006–2011.</p>
+      </section>
+
+    </article>
+  </main>
+</body>
+</html>
